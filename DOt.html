@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Update</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="div1" class="content-div">
+        <table>
+            <tr>
+                <td><input type="text" placeholder="Name" id="n"></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Profile URL" id="p"></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="About" id="a"></td>
+            </tr>
+        </table>
+        <button onclick="update()">Submit</button>
+    </div>
+
+    <div id="div2" class="content-div">
+        <h1 id="h1">Name</h1>
+        <img id="img" src="your-image-url-here" alt="Profile Image">
+        <h2 id="h2">About</h2>
+    </div>
+
+    <script>
+        function update() {
+            var name = document.getElementById('n').value;
+            var profileUrl = document.getElementById('p').value;
+            var about = document.getElementById('a').value;
+
+            document.getElementById('h1').textContent = name;
+            document.getElementById('img').src = profileUrl;
+            document.getElementById("h2").innerHTML = about;
+        }
+    </script>
+</body>
+</html>
